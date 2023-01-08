@@ -1,0 +1,868 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Zesty Eatery</title>
+  <link rel="stylesheet" href="Res.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+</head>
+
+<body>
+  <header id="navbar">
+    <div class="logo">
+      <span>Divine</span>
+      <span>Bites...</span>
+    </div>
+    <a href="#" class="toggle-button">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </a>
+    <div class="list">
+      <ul>
+        <li><a href="#home" class="active">Home</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#about">About us</a></li>
+        <li><a href="#contact_us">Contact us</a></li>
+        <li id="cart"><a href="#" id="cd" onclick="cartopen()"><i class="fa fa-shopping-cart"></i></a></li>
+
+
+
+        <section id="box1">
+          <input type="serach" placeholder="search for dish" class="in" id="searchbar" />
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </section>
+      </ul>
+    </div>
+  </header>
+  <section id="home">
+    <div class="h_img"> <img src="images/main_img.png" alt=""></div>
+    <div class="title">
+      <div class="logo1"> <img src="images/logo.png" alt=""></div>
+      <div class="qoute1">Live,Love,Eat</div>
+      <div class="Rname">
+        <p>Zesty Eatery</p>
+      </div>
+      <div class="qoute2">Life Is Infinitely Delicious</div>
+      <div class="order">
+        <a href="#menu"><span>Order Now</span></a>
+        <a href="#Reservation"> <span>Reservation</span></a>
+      </div>
+    </div>
+  </section>
+  <section id="menu">
+    <div class="our-menu">
+      <p class="fmenu1">Our Menu:)</p>
+      <p class="fmenu2"> <span>Heaven</span><span>-vegan food</span></p>
+
+    </div>
+    <div class="main">
+      <div class="cont1">
+        <div class="sub-main" data-key="1">
+          <div class="box1"><img src="images/Rveg9.jpg" alt="">
+          </div>
+          <div class="finform">
+            <p class="price"> <span class="fname">Parotta</span></p>
+            <p class="fqoute">Laughter is brightest where food is best.”</p>
+            <p class="rating">
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star"></span>
+              <span class="fa fa-star"></span>
+            </p>
+            <div class="Amt">
+              <span>$50</span><button class="abtn">add-cart</button>
+              <button class="remove" onclick="Remove(1)">Remove</button>
+            </div>
+          </div>
+        </div>
+        <div class="sub-main" data-key="2">
+          <div class="box1"><img src="images/Rveg1.jpg" alt="">
+          </div>
+          <div class="finform">
+            <p class="price"> <span class="fname">Noodles</span>
+            <p class="fqoute">Laughter is brightest where food is best.”</p>
+            <p class="rating">
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star"></span>
+            </p>
+            <div class="Amt">
+              <span>$50</span><button class="abtn">add-cart</button>
+              <button class="remove" onclick="Remove(2)">Remove</button>
+            </div>
+          </div>
+        </div>
+        <div class="sub-main" data-key="3">
+          <div class="box1"><img src="images/Rveg2.jpg" alt=""></div>
+          <div class="finform">
+            <p class="price"> <span class="fname">Pasta</span> </p>
+            <p class="fqoute">Laughter is brightest where food is best.”</p>
+            <p class="rating">
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star"></span>
+              <span class="fa fa-star"></span>
+            </p>
+            <div class="Amt">
+              <span>$40</span><button class="abtn">add-cart</button>
+              <button class="remove" onclick="Remove(3)">Remove</button>
+            </div>
+          </div>
+        </div>
+        <div class="sub-main" data-key="4">
+          <div class="box1"><img src="images/Rveg3.jpg" alt=""></div>
+          <div class="finform">
+            <p class="price"> <span class="fname">Veg Salad</span></p>
+            <p class="fqoute">Laughter is brightest where food is best.”</p>
+            <p class="rating">
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star"></span>
+            </p>
+            <div class="Amt">
+              <span>$55</span><button class="abtn">add-cart</button>
+              <button class="remove" onclick="Remove(4)">Remove</button>
+            </div>
+          </div>
+        </div>
+        <div class="sub-main" data-key="5">
+          <div class="box1"><img src="images/Rveg4.jpg" alt=""></div>
+          <div class="finform">
+            <p class="price"> <span class="fname">Idli</span></p>
+            <p class="fqoute">Laughter is brightest where food is best.”</p>
+            <p class="rating">
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star"></span>
+              <span class="fa fa-star"></span>
+            </p>
+            <div class="Amt">
+              <span>$60</span><button class="abtn">add-cart</button>
+              <button class="remove" onclick="Remove(5)">Remove</button>
+            </div>
+          </div>
+        </div>
+        <div class="sub-main" data-key="6">
+          <div class="box1"><img src="images/Rveg5.jpg" alt=""></div>
+          <div class="finform">
+            <p class="price"> <span class="fname">Samosa</span></p>
+            <p class="fqoute">Laughter is brightest where food is best.”</p>
+            <p class="rating">
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star"></span>
+            </p>
+            <div class="Amt">
+              <span>$40</span><button class="abtn">add-cart</button>
+              <button class="remove" onclick="Remove(6)">Remove</button>
+            </div>
+          </div>
+        </div>
+        <div class="sub-main" data-key="7">
+          <div class="box1"><img src="images/Rveg6.jpg" alt=""></div>
+          <div class="finform">
+            <p class="price"> <span class="fname">Rice Bath</span></p>
+            <p class="fqoute">Laughter is brightest where food is best.”</p>
+            <p class="rating">
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star"></span>
+              <span class="fa fa-star"></span>
+            </p>
+            <div class="Amt">
+              <span>$70</span><button class="abtn">add-cart</button>
+              <button class="remove" onclick="Remove(7)">Remove</button>
+            </div>
+          </div>
+        </div>
+        <div class="sub-main" data-key="8">
+          <div class="box1"><img src="images/Rveg7.jpg" alt=""></div>
+          <div class="finform">
+            <p class="price"> <span class="fname">Puri bhaji</span>
+            <p class="fqoute">Laughter is brightest where food is best.”</p>
+            <p class="rating">
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star"></span>
+            </p>
+            <div class="Amt">
+              <span>$80</span><button class="abtn">add-cart</button>
+              <button class="remove" onclick="Remove(8)">Remove</button>
+            </div>
+          </div>
+        </div>
+        <div class="sub-main" data-key="9">
+          <div class="box1"><img src="images/Rveg8.jpg" alt=""></div>
+          <div class="finform">
+            <p class="price"> <span class="fname">Fried lays chips</span> </p>
+            <p class="fqoute">Laughter is brightest where food is best.”</p>
+            <p class="rating">
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star"></span>
+              <span class="fa fa-star"></span>
+            </p>
+            <div class="Amt">
+              <span>$55</span><button class="abtn">add-cart</button>
+              <button class="remove" onclick="Remove(9)">Remove</button>
+            </div>
+          </div>
+        </div>
+        <div class="cont2">
+          <p class="menu-title"> <span>Heaven</span><span>-non Vegetarian</span></p>
+          <div class="sub-main" data-key="10">
+            <div class="box1"><img src="images/nveg1.jpg" alt=""></div>
+            <div class="finform">
+              <p class="price"> <span class="fname">Name</span> </p>
+              <p class="fqoute">Laughter is brightest where food is best.”</p>
+              <p class="rating">
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star"></span>
+                <span class="fa fa-star"></span>
+              </p>
+              <div class="Amt">
+                <span>$58</span><button class="abtn">add-cart</button>
+                <button class="remove" onclick="Remove(10)">Remove</button>
+              </div>
+            </div>
+          </div>
+          <div class="sub-main" data-key="11">
+            <div class="box1"><img src="images/nveg2.jpg" alt=""></div>
+            <div class="finform">
+              <p class="price"> <span class="fname">Name</span> </p>
+              <p class="fqoute">Laughter is brightest where food is best.”</p>
+              <p class="rating">
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star"></span>
+                <span class="fa fa-star"></span>
+              </p>
+              <div class="Amt">
+                <span>$55</span><button class="abtn">add-cart</button>
+                <button class="remove" onclick="Remove(11)">Remove</button>
+              </div>
+            </div>
+          </div>
+          <div class="sub-main" data-key="12">
+            <div class="box1"><img src="images/nveg3.jpg" alt=""></div>
+            <div class="finform">
+              <p class="price"> <span class="fname">Name</span> </p>
+              <p class="fqoute">Laughter is brightest where food is best.”</p>
+              <p class="rating">
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star"></span>
+                <span class="fa fa-star"></span>
+              </p>
+              <div class="Amt">
+                <span>$45</span><button class="abtn">add-cart</button>
+                <button class="remove" onclick="Remove(12)">Remove</button>
+              </div>
+            </div>
+          </div>
+          <div class="sub-main" data-key="13">
+            <div class="box1"><img src="images/nveg4.jpg" alt=""></div>
+            <div class="finform">
+              <p class="price"> <span class="fname">Name</span> </p>
+              <p class="fqoute">Laughter is brightest where food is best.”</p>
+              <p class="rating">
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star"></span>
+                <span class="fa fa-star"></span>
+              </p>
+              <div class="Amt">
+                <span>$80</span><button class="abtn">add-cart</button>
+                <button class="remove" onclick="Remove(13)">Remove</button>
+              </div>
+            </div>
+          </div>
+          <div class="sub-main" data-key="14">
+            <div class="box1"><img src="images/nveg5.jpg" alt=""></div>
+            <div class="finform">
+              <p class="price"> <span class="fname">Name</span> </p>
+              <p class="fqoute">Laughter is brightest where food is best.”</p>
+              <p class="rating">
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star"></span>
+                <span class="fa fa-star"></span>
+              </p>
+              <div class="Amt">
+                <span>$59</span><button class="abtn">add-cart</button>
+                <button class="remove" onclick="Remove(14)">Remove</button>
+              </div>
+            </div>
+          </div>
+          <div class="sub-main" data-key="15">
+            <div class="box1"><img src="images/nveg6.jpg" alt=""></div>
+            <div class="finform">
+              <p class="price"> <span class="fname">Name</span> </p>
+              <p class="fqoute">Laughter is brightest where food is best.”</p>
+              <p class="rating">
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star"></span>
+                <span class="fa fa-star"></span>
+              </p>
+              <div class="Amt">
+                <span>$75</span><button class="abtn">add-cart</button>
+                <button class="remove" onclick="Remove(15)">Remove</button>
+              </div>
+            </div>
+          </div>
+          <div class="sub-main" data-key="16">
+            <div class="box1"><img src="images/nveg7.jpg" alt=""></div>
+            <div class="finform">
+              <p class="price"> <span class="fname">prwan fry</span> </p>
+              <p class="fqoute">Laughter is brightest where food is best.”</p>
+              <p class="rating">
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star"></span>
+                <span class="fa fa-star"></span>
+              </p>
+              <div class="Amt">
+                <span>$00</span><button class="abtn">add-cart</button>
+                <button class="remove" onclick="Remove(16)">Remove</button>
+              </div>
+            </div>
+          </div>
+          <div class="sub-main" data-key="17">
+            <div class="box1"><img src="images/nveg8.jpg" alt=""></div>
+            <div class="finform">
+              <p class="price"> <span class="fname">Name</span> </p>
+              <p class="fqoute">Laughter is brightest where food is best.”</p>
+              <p class="rating">
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star"></span>
+                <span class="fa fa-star"></span>
+              </p>
+              <div class="Amt">
+                <span>$55</span><button class="abtn">add-cart</button>
+                <button class="remove" onclick="Remove(17)">Remove</button>
+              </div>
+            </div>
+          </div>
+          <div class="sub-main" data-key="18">
+            <div class="box1"><img src="images/nveg9.jpg" alt=""></div>
+            <div class="finform">
+              <p class="price"> <span class="fname">Name</span> </p>
+              <p class="fqoute">Laughter is brightest where food is best.”</p>
+              <p class="rating">
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star"></span>
+                <span class="fa fa-star"></span>
+              </p>
+              <div class="Amt">
+                <span>$35</span><button class="abtn">add-cart</button>
+                <button class="remove" onclick="Remove(18)">Remove</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="cont3">
+          <p class="menu-title"> <span>Desire Meets</span><span> A New Juice</span></p>
+          <div class="sub-main" data-key="19">
+            <div class="box1"><img src="images/ju1.jpg" alt=""></div>
+            <div class="finform">
+              <p class="price"> <span class="fname">Name</span> </p>
+              <p class="fqoute">Laughter is brightest where food is best.”</p>
+              <p class="rating">
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star"></span>
+                <span class="fa fa-star"></span>
+              </p>
+              <div class="Amt">
+                <span>$60</span><button class="abtn">add-cart</button>
+                <button class="remove" onclick="Remove(19)">Remove</button>
+              </div>
+            </div>
+          </div>
+          <div class="sub-main" data-key="20">
+            <div class="box1"><img src="images/ju2.jpg" alt=""></div>
+            <div class="finform">
+              <p class="price"> <span class="fname">Name</span> </p>
+              <p class="fqoute">Laughter is brightest where food is best.”</p>
+              <p class="rating">
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star"></span>
+                <span class="fa fa-star"></span>
+              </p>
+              <div class="Amt">
+                <span>$90</span><button class="abtn">add-cart</button>
+                <button class="remove" onclick="Remove(20)">Remove</button>
+              </div>
+            </div>
+          </div>
+          <div class="sub-main" data-key="21">
+            <div class="box1"><img src="images/ju3.jpg" alt=""></div>
+            <div class="finform">
+              <p class="price"> <span class="fname">Name</span> </p>
+              <p class="fqoute">Laughter is brightest where food is best.”</p>
+              <p class="rating">
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star"></span>
+                <span class="fa fa-star"></span>
+              </p>
+              <div class="Amt">
+                <span>$75</span><button class="abtn">add-cart</button>
+                <button class="remove" onclick="Remove(21)">Remove</button>
+              </div>
+            </div>
+          </div>
+          <div class="sub-main" data-key="22">
+            <div class="box1"><img src="images/ju4.jpg" alt=""></div>
+            <div class="finform">
+              <p class="price"> <span class="fname">Name</span> </p>
+              <p class="fqoute">Laughter is brightest where food is best.”</p>
+              <p class="rating">
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star"></span>
+                <span class="fa fa-star"></span>
+              </p>
+              <div class="Amt">
+                <span>$75</span><button class="abtn">add-cart</button>
+                <button class="remove" onclick="Remove(22)">Remove</button>
+              </div>
+            </div>
+          </div>
+          <div class="sub-main" data-key="23">
+            <div class="box1"><img src="images/ju5.jpg" alt=""></div>
+            <div class="finform">
+              <p class="price"> <span class="fname">Name</span> </p>
+              <p class="fqoute">Laughter is brightest where food is best.”</p>
+              <p class="rating">
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star"></span>
+                <span class="fa fa-star"></span>
+              </p>
+              <div class="Amt">
+                <span>$55</span><button class="abtn">add-cart</button>
+                <button class="remove" onclick="Remove(23)">Remove</button>
+              </div>
+            </div>
+          </div>
+          <div class="sub-main" data-key="24">
+            <div class="box1"><img src="images/ju6.jpg" alt=""></div>
+            <div class="finform">
+              <p class="price"> <span class="fname">Name</span> </p>
+              <p class="fqoute">Laughter is brightest where food is best.”</p>
+              <p class="rating">
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star"></span>
+                <span class="fa fa-star"></span>
+              </p>
+              <div class="Amt">
+                <span>$98</span><button class="abtn">add-cart</button>
+                <button class="remove" onclick="Remove(24)">Remove</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <di class="cont4">
+          <p class="menu-title"> <span>Life Is Too Short</span><span>,eat your dessert First</span></p>
+          <div class="sub-main" data-key="25">
+            <div class="box1"><img src="images/des1.jpg" alt=""></div>
+            <div class="finform">
+              <p class="price"> <span class="fname">Name</span> </p>
+              <p class="fqoute">Laughter is brightest where food is best.”</p>
+              <p class="rating">
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star"></span>
+                <span class="fa fa-star"></span>
+              </p>
+              <div class="Amt">
+                <span>$100</span><button class="abtn">add-cart</button>
+                <button class="remove" onclick="Remove(25)">Remove</button>
+              </div>
+            </div>
+          </div>
+          <div class="sub-main" data-key="26">
+            <div class="box1"><img src="images/des2.jpg" alt=""></div>
+            <div class="finform">
+              <p class="price"> <span class="fname">Name</span> </p>
+              <p class="fqoute">Laughter is brightest where food is best.”</p>
+              <p class="rating">
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star"></span>
+                <span class="fa fa-star"></span>
+              </p>
+              <div class="Amt">
+                <span>$55</span><button class="abtn">add-cart</button>
+                <button class="remove" onclick="Remove(26)">Remove</button>
+              </div>
+            </div>
+          </div>
+          <div class="sub-main" data-key="27">
+            <div class="box1"><img src="images/des3.jpg" alt=""></div>
+            <div class="finform">
+              <p class="price"> <span class="fname">Name</span> </p>
+              <p class="fqoute">Laughter is brightest where food is best.”</p>
+              <p class="rating">
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star"></span>
+                <span class="fa fa-star"></span>
+              </p>
+              <div class="Amt">
+                <span>$65</span><button class="abtn">add-cart</button>
+                <button class="remove" onclick="Remove(27)">Remove</button>
+              </div>
+            </div>
+          </div>
+          <div class="sub-main" data-key="28">
+            <div class="box1"><img src="images/des4.jpg" alt=""></div>
+            <div class="finform">
+              <p class="price"> <span class="fname">Name</span> </p>
+              <p class="fqoute">Laughter is brightest where food is best.”</p>
+              <p class="rating">
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star"></span>
+                <span class="fa fa-star"></span>
+              </p>
+              <div class="Amt">
+                <span>$45</span><button class="abtn">add-cart</button>
+                <button class="remove" onclick="Remove(28)">Remove</button>
+              </div>
+            </div>
+          </div>
+          <div class="sub-main" data-key="29">
+            <div class="box1"><img src="images/des5.jpg" alt=""></div>
+            <div class="finform">
+              <p class="price"> <span class="fname">Name</span> </p>
+              <p class="fqoute">Laughter is brightest where food is best.”</p>
+              <p class="rating">
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star"></span>
+                <span class="fa fa-star"></span>
+              </p>
+              <div class="Amt">
+                <span>100</span><button class="abtn">add-cart</button>
+                <button class="remove" onclick="Remove(29)">Remove</button>
+              </div>
+            </div>
+          </div>
+          <div class="sub-main" data-key="30">
+            <div class="box1"><img src="images/des6.jpg" alt=""></div>
+            <div class="finform">
+              <p class="price"> <span class="fname">Name</span> </p>
+              <p class="fqoute">Laughter is brightest where food is best.”</p>
+              <p class="rating">
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star"></span>
+                <span class="fa fa-star"></span>
+              </p>
+              <div class="Amt">
+                <span>$100</span><button class="abtn">add-cart</button>
+                <button class="remove" onclick="Remove(30)">Remove</button>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+  </section>
+  <section class="cart-item">
+  </section>
+  <section id="Reservation">
+    <div class="reserv">
+      <div class="rimg"><img src="images/reserv.jpg" alt=""></div>
+
+      <div class="reserv1">
+        <form action="Reservation.php" method="post">
+          <h1 class="form_title">Reseravtion</h1>
+          <div class="f_reserv">
+            <input type="text" name="fname" id="name" class="f_input" required>
+            <label for="name" class="f_label">Name</label>
+          </div>
+          <div class="f_reserv">
+            <input type="text" name="lname" id="lname" class="f_input" required>
+            <label for="lname" class="f_label">Lastname</label>
+          </div>
+          <div class="f_reserv">
+            <input type="email" name="email" id="email" class="f_input" required>
+            <label for="email" class="f_label">Email</label>
+          </div>
+          <div class="f_reserv">
+            <input type="number" name="member" id="member" class="f_input" max="5" min="1" required>
+            <label for="member" class="f_label">Count</label>
+          </div>
+          <div class="f_reserv">
+            <input type="text" name="tnumber" id="pnumber" class="f_input" required>
+            <label for="pnumber" class="f_label">Contact</label>
+          </div>
+          <div class="f_reserv">
+            <input type="date" name="date" id="date" class="f_input">
+            <label for="date" class="f_label">dd-mm-yyyy</label>
+          </div>
+          <div><input type="submit" value="Submit" id="submitbtn" class="submit"></div>
+        </form>
+      </div>
+    </div>
+  </section>
+  <div class="ccart">
+    <div class="cname">
+      <p>cart</p>
+      <p calss="cinput">
+        <form action="cart.php" method="post">
+        <div><label for="" class="cartl">Items</label><br>
+        <input type="text" disabled name="Itemno"></div>
+        <div><label for="" class="cartl">Total Aamount</label>
+          <input type="text" disabled></div>
+          <input type="button" value="Buy" name="" id="cartbtn">
+        </form>
+      </p>
+    </div>
+    <div class="cartlist"></div>
+  </div>
+  <section id="about">
+    <div class="about_us">
+      <p>About Us</p>
+      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam quos id quae in, voluptatem commodi quas quasi
+        eveniet, asperiores eum hic minus placeat totam accusantium magnam laborum rerum consequuntur! Eaque?
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquid ullam et, architecto sint reiciendis sequi
+        officiis consequuntur maiores ipsam nemo asperiores ex fugiat amet vitae? Officia non error explicabo dolore?
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque commodi distinctio, praesentium minima, rem
+        modi totam odit sed et reprehenderit id voluptatum aliquid magnam beatae cum porro. Aliquid, fuga porro?
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni sit, aliquid sunt omnis voluptas quasi dolor ad
+        non distinctio vel atque ipsam temporibus ab. Possimus fugiat explicabo quia excepturi odit. Lorem ipsum dolor
+        sit amet consectetur adipisicing elit. Blanditiis, amet eaque quaerat cupiditate tenetur in dignissimos adipisci
+        esse, voluptates aut accusamus dicta quam asperiores maxime ducimus odio autem reprehenderit necessitatibus!
+      </p>
+    </div>
+    <div class="chief">
+      <p class="Ctitle">Our Great Chief</p>
+      <div class="R_main">
+        <div class="R_chief">
+          <div class="c_img">
+            <img src="images/chef1.png" alt="">
+          </div>
+          <h2>Brain Henry</h2>
+          <p class="role">Vegetarian</p>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iste voluptatum voluptatibus reiciendis. Eligendi
+            rerum, facilis repudiandae totam aperiam quasi? Consecteturp></p>
+        </div>
+        <div class="R_chief">
+          <div class="c_img">
+            <img src="images/chef2.png" alt="">
+          </div>
+          <h2>Angel</h2>
+          <p class="role">Vegetarian</p>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iste voluptatum voluptatibus reiciendis. Eligendi
+            rerum, facilis repudiandae totam aperiam quasi? Consecteturp></p>
+        </div>
+        <div class="R_chief">
+          <div class="c_img">
+            <img src="images/chef3.jpg" alt="">
+          </div>
+          <h2>Dominic</h2>
+          <p class="role">Vegetarian</p>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iste voluptatum voluptatibus reiciendis. Eligendi
+            rerum, facilis repudiandae totam aperiam quasi? Consecteturp></p>
+        </div>
+      </div>
+    </div>
+    <div class="fuser">
+      <p class="f_title">Testimonials</p>
+      <div class="R_main1">
+        <div class="f_feed">
+          <div class="f_img1"><img src="images/review_1.png" alt=""></div>
+          <h2>Brain Henry</h2>
+          <p class="f_star"><span class="fa fa-star"></span>
+            <span class="fa fa-star "></span>
+            <span class="fa fa-star "></span>
+            <span class="fa fa-star "></span>
+            <span class="fa fa-star "></span>
+          </p>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iste voluptatum voluptatibus reiciendis. Eligendi
+            rerum, facilis repudiandae totam aperiam quasi? Consecteturp></p>
+        </div>
+        <div class="f_feed">
+          <div class="f_img1"><img src="images/review_3.png" alt=""></div>
+          <h2>Angel</h2>
+          <p class="f_star"><span class="fa fa-star "></span>
+            <span class="fa fa-star "></span>
+            <span class="fa fa-star "></span>
+            <span class="fa fa-star "></span>
+            <span class="fa fa-star"></span>
+          </p>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iste voluptatum voluptatibus reiciendis. Eligendi
+            rerum, facilis repudiandae totam aperiam quasi? Consecteturp></p>
+        </div>
+        <div class="f_feed">
+          <div class="f_img1"><img src="images/review_2.png" alt=""></div>
+          <h2>Dominic</h2>
+          <p class="f_star"><span class="fa fa-star"></span>
+            <span class="fa fa-star "></span>
+            <span class="fa fa-star "></span>
+            <span class="fa fa-star  "></span>
+            <span class="fa fa-star"></span>
+          </p>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iste voluptatum voluptatibus reiciendis. Eligendi
+            rerum, facilis repudiandae totam aperiam quasi? Consecteturp></p>
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>
+  <div class="scroll"></div>
+  <section id="contact_us">
+    <img src="images/logo.png" alt="">
+    <div class="R_contact">
+      <div class="R_contact1">
+        <h2>Contact Us</h2>
+        <p>kasavanahalli kaikondrahalli lake <br>Bangalore-560035</p>
+        <p> <span><i class="fa-solid fa-envelope"></i></span> <span>Revu8275@gmail.com</span> </p>
+        <p> <span><i class="fa-solid fa-phone"></i></span>8310611109<span></span> </p>
+        <p class="c_link">
+          <a href=""><i class="fa-brands fa-github" style="color: black;"></i></a>
+          <a href=""><i class="fa-brands fa-instagram" style="color: red;"></i></a>
+          <a href=""><i class="fa-brands fa-facebook" style="color: blue;"></i></a>
+          <a href=""><i class="fa-brands fa-linkedin" style="color: lightskyblue;"></i></a>
+          <a href=""><i class="fa-brands fa-twitter" style="color:#3366FF;"></i></a>
+        </p>
+      </div>
+      <div class="R_contact2">
+        <h2>Useful link</h2>
+        <p class="c_slink"><a href="#home">home</a></p>
+        <p class="c_slink"><a href="#menu">menu</a></p>
+        <p class="c_slink"><a href="#about">about us</a></p>
+        <p class="c_slink"><a href="#contact_us">feedback</a></p>
+      </div>
+      <div class="R_contact3">
+        <h2>Feedback</h2>
+        <form action="feedback.php" method="post">
+          <p class="c_input"><input type="text" name="fename" placeholder="Name" class="feedback"></p>
+          <p class="c_input"><input type="email" class="feedback" name="email" placeholder="Email"></p>
+          <p class="c_input"><input type="textarea" name="comment" class="feedback" placeholder="Leave a comment"></p>
+          <p class="c_input"><input type="submit" value="Submit" id="cbtn" class="submit"></p>
+        </form>
+      </div>
+    </div>
+    <div class="copyright"> Copyright &#169;2022 soulhacker.Designed By Revu Tanga</div>
+  </section>
+  <script>
+    const toggleButton = document.getElementsByClassName("toggle-button")[0];
+    const list = document.getElementsByClassName("list")[0];
+    toggleButton.addEventListener('click', () => {
+      list.classList.toggle('active')
+    });
+    var noti = document.getElementById('cart');
+    var select = document.getElementsByClassName('.ccart');
+    var button = document.getElementsByTagName('button');
+    for (but of button) {
+      but.addEventListener('click', (e) => {
+        var add = Number(noti.getAttribute('data-count') || 0)
+        noti.setAttribute('data-count', add + 1);
+        noti.classList.add('zero');
+      })
+    } 
+  </script>
+  <script>
+    let item = document.querySelectorAll('.main .sub-main');
+    item.forEach(sub => {
+      sub.addEventListener('click', function (event) {
+        if (event.target.classList.contains('abtn')) {
+          var itemNew = sub.cloneNode(true);
+          itemNew.querySelector('.abtn').innerText="Buy-now";
+          itemNew.querySelector('.remove').style.display="inline";
+          itemNew.querySelector('.fqoute').style.display="none";
+          let checkIsset = false;
+          let cartlis = document.querySelectorAll('.ccart .sub-main');
+          cartlis.forEach(ccart => {
+            if (ccart.getAttribute('data-key') == itemNew.getAttribute('data-key')) {
+              checkIsset = true;
+              alert('this item is already added')
+            }
+          });
+          if (checkIsset == false) {
+            document.querySelector('.cartlist').appendChild(itemNew);
+          }
+        }
+      });
+    });
+    function Remove($key){
+      let remove1 = document.querySelectorAll('.ccart .sub-main');
+      remove1.forEach(sub=>{
+        if(sub.getAttribute('data-key')==$key){
+          sub.remove();
+          return;
+        }
+      })
+      var noti = document.getElementById('cart');
+    var select = document.getElementsByClassName('.ccart');
+    var button = document.getElementsByTagName('button');
+    for (but of button) {
+      but.addEventListener('click', (e) => {
+        var add = Number(noti.getAttribute('data-count') || 0)
+        noti.setAttribute('data-count',add-1);
+        noti.classList.add('zero');
+      })
+    } 
+    }
+    function cartopen(){
+      var x=document.querySelector(".ccart");
+      if(x.style.display=="none"){
+        x.style.display="flex";
+      }
+      else{
+        x.style.display="none";
+      }
+    }
+  </script>
+</body>
+
+</html>
